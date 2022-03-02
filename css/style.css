@@ -1,0 +1,700 @@
+/*
+
+
+*/
+
+@charset 'UTF-8';
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url('font/Montserrat-SemiBold.ttf');
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url('font/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('font/Montserrat-Bold.ttf');
+}
+@font-face {
+  font-family: Roboto-Medium;
+  src: url('font/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: Roboto-Light;
+  src: url('font/Roboto-Light.ttf');
+}
+/*********************************************************************************/
+/* Basic      <button onclick="calcDiff()">Calculate diff</button>                                                                   */
+/*********************************************************************************/
+
+			body {
+				display: block;
+				margin: 0px;
+				padding: 0px;
+				background: #ffffff;
+				font-family: Roboto-Light;
+				font-size: 12pt;
+				font-weight: 300;
+				color: #333;
+				width: 100%;
+				
+			}
+
+			h1, h2, h3 {
+				margin: 0px;
+				padding: 0px;
+				font-weight: 300;
+			}
+
+			p {
+				line-height: 180%;
+			}
+
+			ul{ 
+				margin: 0;
+				text-decoration: none;
+				list-style-type:none;
+				margin-top: 80px;
+				float: left;
+			}
+
+			a {
+				text-decoration: none;
+				color: #fff;
+			}
+
+
+			strong {
+				font-weight: 700;
+				color: #2A2A2A;
+			}
+			button:hover{
+				cursor: pointer;
+			}
+
+
+/*********************************************************************************/
+/* HEADER NAV                                                                    */
+/*********************************************************************************/			
+
+header{
+
+}
+
+/*********************************************************************************/
+/* MAIN IMG_TEXT                                                                 */
+/*********************************************************************************/	
+
+main{ 
+	overflow: hidden;
+ 	height: 800px;
+}
+
+/*********************************************************************************/
+/* MAIN ASIDE                                                                    */
+/*********************************************************************************/	
+
+#login{ 
+	width: 290px;
+	height: 300px;
+	margin: 15px auto;
+}
+#login input{
+	width: 280px;
+	padding: 8px 10px;
+	font-size: 16px;
+	margin: 5px 0px;
+}
+#login .submit{
+	font-family: Roboto-Medium;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	width: 290px;
+	padding: 8px 10px;
+	background-color: rgb(33 150 243);
+}
+
+.main_aside{
+	height: 250px;
+	margin-top: 10px;
+	float: right;
+	width: 500px;
+}
+.main_aside span{
+	font-family: Roboto-Medium;
+	font-weight: bold;
+	font-size: 16px;
+	width: 160px;
+}
+.aside_aside{
+	width: 160px;
+	float: right;
+}
+#JoinBtn {
+font-size: 45px;
+color: rgb(33 150 243);
+position: absolute;
+border: none;
+border-radius: 50%;
+width: 60px;
+padding: 1px 10px 10px 10px;
+height: 60px; 
+bottom: 20px;
+right: 15px;
+box-shadow: 3px 3px 19px -5px rgba(0,0,0,0.55);
+-webkit-box-shadow: 3px 3px 19px -5px rgba(0,0,0,0.55);
+-moz-box-shadow: 3px 3px 19px -5px rgba(0,0,0,0.55);
+background-color: rgba(255, 255, 255, 0.6);
+}
+#JoinBtn:focus{
+  outline-style: none;
+  box-shadow: none;
+  border:none;
+}
+
+/*********************************************************************************/
+/* MAIN FORM                                                                     */
+/*********************************************************************************/
+
+
+
+
+.main-list{
+	padding-top: 15px;
+}
+#searchForm{
+	border-radius: 23px;
+	position: relative;
+	width: 500px;
+	height: 40px;
+	margin:0 auto;
+	background-color: #d6d4d4;
+}
+#searchForm img{
+	position: absolute;
+	top: 3px;
+	right: 14px;
+}
+
+#searchForm input{
+	border-radius: 13px;
+	border: none;
+	font-size: 14px;
+	background-color: transparent;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	width: 250px;
+	height: 15px;
+	padding: 7px;
+}
+
+#searchForm input:focus{
+	border: none;
+	outline: none;
+}
+
+#myUL{
+	padding-top: 10px;
+	width: 500px;
+	margin:0 auto;
+	max-height: 400px;
+	overflow: auto;
+}
+
+.accordion {
+  background-color: white;
+  color: rgb(55,62,77);
+  cursor: pointer;
+  padding: 7px 10px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  transition: 0.4s;
+
+}
+
+.accordion img{
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+
+}
+
+.accordion:hover {
+  background-color: #f2f2f2; 
+}
+
+.profile-left {
+	font-size: 14px;
+	text-align: left;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	width: 75%;
+	float: right;
+}
+.name{
+	font-size: 22px;
+	color: rgb(0 99 177);
+	padding-bottom: 5px;
+	width: 100%;
+	}
+
+
+/*********************************************************************************/
+/* MAIN MODAL                                                                    */
+/*********************************************************************************/
+/* Modal Content */
+.top_btn_wrap{
+	height: 33px;
+	width: 500px;
+	margin: 15px auto;
+	position: relative;
+}
+.logout_btn{
+	position: absolute;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 10px;
+	width: 100px;
+	right: 0;
+}
+.btn_top {
+	border: none;
+	border-radius: 6px;
+	padding: 8px 199px; 
+	position: relative;
+	text-align: center;
+	width: 500px;
+	background-color: rgb(33 150 243);
+}
+
+#showdate{
+	border-radius: 6px;
+	padding: 8px 4px; 
+	position: relative;
+	text-align: center;
+	width: 485px;
+	background-color: #efefef;
+	border: 1px solid rgb(33 150 243);
+}
+.profileImg_btn{
+	border: none;
+	background-color: transparent;
+}
+#image_form{
+	display: none;
+}
+.upload_btn{
+	border-radius: 6px;
+	padding: 8px 10px;
+	width: 290px;
+	margin-bottom: 10px;
+	border: 1px solid rgb(33 150 243);
+}
+#btn_upisiD{
+	font-family: Roboto-Medium;
+	margin: 15px 0px;
+	color: white;
+	font-size: 15px;
+}
+.auto_d_main #myUL{
+	height: 200px;
+	overflow-y: scroll;
+}
+.modal-content {
+  background-color: rgba(255,255,255, 0.95);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgb(33 150 243 / 33%);
+  width: 92%;
+  max-width: 290px;
+  border-radius: 8px;
+  font-family: Montserrat-Regular;
+  font-weight: bold;
+  font-size: 14px;
+}
+.modal-content .label p{
+	margin-top: 12px;
+	font-size: 18px;
+	font-weight: bold;
+	width: 210px;
+	float: right;
+}
+.modal-content .label{
+	height: 60px;
+}
+.modal-content .label label{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.modal-content img{
+	float: left;
+	width: 100px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default  */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.join-content{
+  height: 590px;
+}
+.login-content{
+  height: 300px;
+}
+/* The Close Button */
+.close {
+  padding: 0px 10px;
+  color: rgb(33 150 243);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn_dodaj_autod {
+	padding: 8px 10px;
+	width: 273px;
+	border: none;
+	border-radius: 6px;
+	background-color: rgb(33 150 243);
+}
+
+.wrap_auto_d {
+	display: none;
+}
+
+/* Modal Content Form */
+.modal form {
+	width: 90%;
+	border: none;
+}
+.modal form a {
+	color: #fff;
+}
+.modal form input{
+	width: 100%;
+	background-color: rgb(33 150 243 / 33%);
+	font-family: Roboto-Light;
+	font-size: 20px;
+	margin-top: 8px;
+	border: none;
+	border-radius: 5px;
+	height: 38px;
+	padding-left: 10px;
+}
+.modal form input#payh{
+	width: 83px;
+	margin-left: 15px;
+}
+.modal form input#check_h{
+	height: 20px;
+	width: 30px;
+}
+.modal form select{
+	width: 55px;
+	background-color: rgb(33 150 243 / 33%);
+	font-family: Roboto-Light;
+	font-size: 20px;
+	margin-top: 8px;
+	margin-left: 15px;
+	border: none;
+	border-radius: 5px;
+	height: 38px;
+	padding-left: 10px;
+}
+.modal form input:focus{
+  outline-style: none;
+  box-shadow: none;
+  border:none;
+}
+.modal form #agree{
+	width: 20px;
+	margin-left: 100px;
+	height: 14px;
+}
+.modal form .subbmit_btn {
+	background-color: rgb(33 150 243);
+	width: 100%;
+}
+.alert_msg_redd{
+	margin-top: 5px;
+	border-radius:6px;
+	padding: 5px;
+	color: red;
+}
+/*********************************************************************************/
+/* PROFILE                                                                       */
+/*********************************************************************************/
+
+.profile-main{
+	padding-top: 15px;
+	width: 500px;
+	margin:0 auto;
+}
+.profile-main .user img{
+	border-radius: 50%;
+	object-fit: cover;
+	width: 45px;
+	height: 45px; 
+}
+.profile-main .profile-left{
+	font-family: Roboto-Medium;
+	padding-top: 0px;
+}
+.viewreport{
+    overflow: hidden;
+	overflow-y: scroll;
+	min-height: 80px;
+	max-height: 300px;
+	width: 100%;
+	padding: 5px;
+}
+.menu_btns{
+	padding-top: 10px;
+	width: 100%;
+	display: flex;
+}
+.menu_btns button{
+	font-family: Roboto-Medium;
+	transition: all 0.5s ease;
+	margin: 3px;
+	border-radius: 6px;
+	border:none;
+	padding: 8px 10px;
+	font-size: 15px;
+}
+#menu_isplata{
+	flex: 10;
+	background-color: #03a9f4;
+}
+#menu_zarada{
+	flex: 2;
+	background-color: #8bc34a;
+}
+#menu_dug{
+	flex: 2;
+	background-color: #ff5722;
+}
+
+.wrap_dis  button{
+	width: 290px;
+	overflow: hidden;
+}
+.wrap_dis div{
+	padding: 10px;
+}
+.wrap_dis div button{
+
+	font-family: Roboto-Medium;
+	border: none;
+	font-size: 15px;
+	padding: 8px 10px;
+	margin-top: 5px;
+	width: 100%;
+}
+.wrap_dis div input{
+	background-color: #d6d4d4;
+	border: none;
+	font-size: 15px;
+	padding: 8px 10px;
+	margin-top: 5px;
+	width: 336px;
+}
+.wrap_dis div h3{
+	height: 40px;
+}
+.wrap_dis div .kurs{
+	width: 50px;
+}
+.wrap_dis div .opis{
+	width: 460px;
+}
+.wrap_dis div select{
+	background-color: #d6d4d4;
+	border: none;
+	font-size: 15px;
+	padding: 7px 10px;
+	margin-top: 5px;
+	width: 120px;
+}
+
+
+.dis_isplata{	
+	
+	
+}
+
+.dis_zarada{
+	
+	display: none;
+}
+.dis_dug{
+	
+	display: none;
+}
+
+.dis_isplata button{
+	background-color: #03a9f4;
+}
+.dis_zarada  button{
+	background-color: #8bc34a;
+}
+.dis_dug  button{
+	background-color: #ff5722;
+}
+
+.istorija_li {
+	border: none;
+	width: 485px;
+	margin: 4px 0px;
+	padding: 10px;
+	border-radius: 23px;
+	
+}
+.istorija_li span{
+	font-size: 14px;
+	margin-left: 10px;
+}
+.istorija_li span span{
+	font-family: Roboto-Medium;
+
+}
+.istorija_li:focus{
+	border: none;
+	outline: none;
+}
+.li_isplata {
+	background-color: #03a9f4;
+}
+.li_zarada{
+	background-color: #8bc34a;
+}
+.li_dug{
+	background-color:  #ff5722;
+}
+.alert_msg{
+	margin-bottom: 10px;
+	text-align: center;
+	color: black;
+	background-color: white;
+	border-radius:6px;
+}
+.alert_msg_blue{
+	border-radius:6px;
+	padding: 5px;
+	border: 1px solid blue;
+}
+.alert_msg_red{
+	border-radius:6px;
+	padding: 5px;
+	border: 1px solid red;
+}
+/*********************************************************************************/
+/* FOOTER                                                                        */
+/*********************************************************************************/
+footer{
+	background-color: rgb(214, 213, 213);
+	height: 145px;
+	font-weight: bold;
+}
+footer .footer_left{
+	padding: 10px 25px;
+	padding-left: 50px;
+	float: left;
+}
+footer .footer_left p{
+	margin: 5px;
+}
+footer .footer_card{
+	float: right;
+}
+/*********************************************************************************/
+/* AUTO DNEVNICE                                                                 */
+/*********************************************************************************/
+.auto_d_main{
+	padding-top: 15px;
+	width: 500px;
+	margin: 0 auto;
+}
+.Edit_li{
+	margin-top: 10px;
+}
+.Edit_li label{
+	font-size: 16px;
+	font-family: Roboto-Medium;
+	color: rgb(33 150 243);
+}
+.Edit_li span{
+	font-family: Roboto-Medium;
+}
+.Edit_li input{
+	width: 190px;
+	background-color: #d6d4d4;
+	font-size: 15px;
+	margin: 8px 3px;
+	border: none;
+	border-radius: 5px;
+	height: 30px;
+	padding-left: 10px;
+}
+.Edit_li button{
+	font-family: Roboto-Medium;
+	color: white;
+	width: 85px;
+	font-size: 15px;
+	margin: 8px 3px;
+	border: none;
+	border-radius: 5px;
+	height: 30px;
+	padding-left: 10px;
+}
+
+#edit_description{
+	width: 400px;
+}
+
+.span_right{
+	float: right;
+}
+
+.edit_save{
+	background-color: #8bc34a;
+}
+.edit_delete{
+	background-color: #f44336;
+}
+#edit_back{
+	background-color: #00bcd4;
+}
+
+/*********************************************************************************/
+/* MAGACIONER                                                                    */
+/*********************************************************************************/
+.wrap_dis div .naziv_artikla{
+	width: 380px;
+}
+.wrap_dis div .kolicina{
+	width: 76px;
+}
